@@ -53,6 +53,7 @@ steps:
     publishWebProjects: false
     arguments: '--no-build --configuration $(buildConfiguration) -r win-x64 --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
+    modifyOutputPath: false
 
 - publish: '$(Build.ArtifactStagingDirectory)'
   artifact: drop
